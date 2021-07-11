@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+
+<body id="home">
+    <%- include("./partials/sidebar.ejs") %>
+    <%- include("./partials/navbar.ejs") %>
+
+    <header class="home-header">
+        <div class="inner">
+            <h1>Save the Turtles</h1>
+            <div class="buttonLink">
+                <a href="">Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="what-we-do" class="section">
+        <h2>What we do</h2>
+
+        <div class="slider">
+            <div class="slide current"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+        </div>
+
+        <div class="cards-container">
+
+            <% contents.cards.forEach(card=> { %>
+                <div class="card">
+                    <img src="/icons/<%= card.img %>" alt="">
+                    <h3>
+                        <%= card.header %>
+                    </h3>
+                    <p>
+                        <%= card.body %>
+                    </p>
+                </div>
+                <% }) %>
+
+        </div>
+
+    </section>
+
+    <section class="donate-banner">
+        <div class="banner-text">
+            <h4>YOUR SUPPORT MEANS THE WORLD TO THE SEA TURTLES AND OUR ORGANIZATION.</h4>
+            <div class="buttonLink">
+                <a href="">
+                    <i class="las la-heart"></i>
+                    DONATE TODAY
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="what-you-can-do" class="section">
+
+        <h2>What you can do</h2>
+
+        <div class="articles-container">
+
+            <% contents.articles.forEach( article=> { %>
+                <article class="article">
+                    <img src="/images/<%= article.img %>" alt="">
+                    <div class="article-content">
+                        <h3>
+                            <%= article.header %>
+                        </h3>
+                        <p>
+                            <%= article.body %>
+                        </p>
+                    </div>
+                </article>
+                <%})%>
+
+        </div>
+
+    </section>
+
+    <section id="newsletter">
+        <h3>Don't miss an update.</h3>
+        <p>We will never spam you or sell your info. Just the important Shellter news and updates!</p>
+        <form action="">
+            <input type="text" placeholder="First name">
+            <input type="email" placeholder="Email address">
+            <button>Get Email Alerts</button>
+        </form>
+    </section>
+
+    <%- include("./partials/footer.ejs") %>
+
+</body>
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+
+    const timeInterval = 5000;
+    let slideInterval;
+
+    const nextSlide = () => {
+        const current = document.querySelector(".current");
+        current.classList.remove("current");
+
+        if (current.nextElementSibling) {
+            current.nextElementSibling.classList.add("current");
+        }
+        else {
+            slides[0].classList.add("current");
+        }
+    };
+
+    slideInterval = setInterval(nextSlide, timeInterval);
+
+  
+    /* Global script*/
+
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const sideBar = document.querySelector('.sidebar');
+    const navBar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', e => {
+        if (window.pageYOffset > window.innerHeight) {
+            navBar.style.backgroundColor = "#021645";
+        }
+        else {
+            navBar.style.backgroundColor = "transparent";
+        }
+    });
+
+    toggleBtn.addEventListener('click', e => {
+        sideBar.classList.toggle('active');
+
+    })
+
+</script>
+
+</html>
