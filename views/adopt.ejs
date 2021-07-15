@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("./partials/head.ejs") %>
+
+<body id="adopt">
+    
+    <%- include("./partials/shopHeader.ejs") %>
+    
+    <section class="adopt-about">
+        <h1>
+            Adopt a Sea Turtle
+        </h1>
+        <p>
+            You can support Shellter by “adopting” a sea turtle patient starting at just ₱ 1,500. Your adoption
+            directly benefits the continued care and treatment of our sick and injured sea turtles. It helps provide the food,
+            medication, hospital care and tank maintenance critical to their health.
+        </p>
+    </section>
+
+    <div class="adopt-parallax">
+        <h1>Make a difference</h1>
+    </div>
+
+    <section class="adopt-items-container">
+        <h2>Our Adoptable Patients</h2>
+
+        
+        <div class="adopt-items">
+
+        <% turtles.forEach( turtle => { %>
+            <div class="item">
+                <img src="" alt="">
+                <div class="item-info">
+                    <a href="/adopt/<%= turtle.id %>">
+                        <h5>Adopt <%= turtle.name %></h5>
+                    </a>
+                    <p><%= turtle.price %></p>
+                </div>
+            </div>
+        <% }) %>
+
+        </div>
+        
+        
+    </section>
+
+    <section class="adopt-packages">
+
+        <h2>Adoption Packages</h2>
+
+        <div class="adopt-packages-container">
+
+            <div class="package">
+                <h3>Package 1</h3>
+                <img src="" alt="">
+                <ul>
+                    <li>Certificate</li>
+                    <li>Reusbale straw</li>
+                    <li>Giant sea turtle plushie</li>
+                    <li>Educational materials</li>
+                </ul>
+            </div>
+
+        <div class="package">
+            <h3>Package 1</h3>
+            <img src="" alt="">
+            <ul>
+                <li>Certificate</li>
+                <li>Reusbale straw</li>
+                <li>Giant sea turtle plushie</li>
+                <li>Educational materials</li>
+            </ul>
+        </div>
+        
+        <div class="package">
+            <h3>Package 2</h3>
+            <img src="" alt="">
+            <ul>
+                <li>Certificate</li>
+                <li>Reusbale straw</li>
+                <li>Giant sea turtle plushie</li>
+                <li>Educational materials</li>
+            </ul>
+        </div>
+
+        <div class="package">
+            <h3>Package 3</h3>
+            <img src="" alt="">
+            <ul>
+                <li>Certificate</li>
+                <li>Reusbale straw</li>
+                <li>Giant sea turtle plushie</li>
+                <li>Educational materials</li>
+            </ul>
+        </div>
+
+        <div class="package">
+            <h3>Package 4</h3>
+            <img src="" alt="">
+            <ul>
+                <li>Certificate</li>
+                <li>Reusbale straw</li>
+                <li>Giant sea turtle plushie</li>
+                <li>Educational materials</li>
+            </ul>
+        </div>
+
+        <div class="package">
+            <h3>Package 5</h3>
+            <img src="" alt="">
+            <ul>
+                <li>Certificate</li>
+                <li>Reusbale straw</li>
+                <li>Giant sea turtle plushie</li>
+                <li>Educational materials</li>
+            </ul>
+        </div>
+
+
+        </div>
+
+    </section>
+
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+
+<script>
+    const searchToggler = document.querySelector(".toggle-btn");
+    const searchBar = document.querySelector(".search-bar");
+
+    searchToggler.addEventListener("click", function() {
+        searchBar.classList.toggle("active");
+    })
+</script>
+
+</html>

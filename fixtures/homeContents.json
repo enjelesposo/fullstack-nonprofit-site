@@ -1,0 +1,47 @@
+{
+    "cards": [
+        {
+            "header": "Rescue",
+            "img": "lifesaver.svg",
+            "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta eum beatae officiis excepturi unde dolorem?"
+        },
+        {
+            "header": "Research",
+            "img": "research.svg",
+            "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta eum beatae officiis excepturi unde dolorem?"
+        },
+        {
+            "header": "Educate",
+            "img": "teach.svg",
+            "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta eum beatae officiis excepturi unde dolorem?"
+        },
+        {
+            "header": "Clean up",
+            "img": "bubbles.svg",
+            "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta eum beatae officiis excepturi unde dolorem?"
+        }
+    ],
+
+    "articles": [
+        {
+            "img": "recycle.jpg",
+            "header": "REDUCE, REUSE, RECYCLE",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, dolore. Explicabo sit quam similique accusamus perspiciatis molestiae id a quibusdam odit sint, ex doloribus alias. Sunt adipisci labore nam cupiditate eveniet quam minima ipsum pariatur laboriosam. Consectetur quas quis facere exercitationem dolore earum esse totam reiciendis vel nulla incidunt hic dolores excepturi accusamus et dicta cum, eligendi enim velit corrupti? Perspiciatis perferendis molestiae suscipit hic, neque alias eos minima nisi optio, totam reprehenderit cum laudantium."
+        },
+        {
+            "img": "sundaysclean.jpg",
+            "header": "PARTICIPATE IN OR ORGANIZE A CLEANUP",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, dolore. Explicabo sit quam similique accusamus perspiciatis molestiae id a quibusdam odit sint, ex doloribus alias. Sunt adipisci labore nam cupiditate eveniet quam minima ipsum pariatur laboriosam. Consectetur quas quis facere exercitationem dolore earum esse totam reiciendis vel nulla incidunt hic dolores excepturi accusamus et dicta cum, eligendi enim velit corrupti? Perspiciatis perferendis molestiae suscipit hic, neque alias eos minima nisi optio, totam reprehenderit cum laudantium."
+        },
+        {
+            "img": "turtle-tourist.jfif",
+            "header": "SUPPORT TURTLE FRIENDLY TOURISM",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, dolore. Explicabo sit quam similique accusamus perspiciatis molestiae id a quibusdam odit sint, ex doloribus alias. Sunt adipisci labore nam cupiditate eveniet quam minima ipsum pariatur laboriosam. Consectetur quas quis facere exercitationem dolore earum esse totam reiciendis vel nulla incidunt hic dolores excepturi accusamus et dicta cum, eligendi enim velit corrupti? Perspiciatis perferendis molestiae suscipit hic, neque alias eos minima nisi optio, totam reprehenderit cum laudantium."
+        },
+        {
+            "img": "turtle-products.jpg",
+            "header": "DON’T CONSUME OR PURCHASE SEA TURTLE PRODUCTS",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, dolore. Explicabo sit quam similique accusamus perspiciatis molestiae id a quibusdam odit sint, ex doloribus alias. Sunt adipisci labore nam cupiditate eveniet quam minima ipsum pariatur laboriosam. Consectetur quas quis facere exercitationem dolore earum esse totam reiciendis vel nulla incidunt hic dolores excepturi accusamus et dicta cum, eligendi enim velit corrupti? Perspiciatis perferendis molestiae suscipit hic, neque alias eos minima nisi optio, totam reprehenderit cum laudantium."
+        }
+    ]
+}
