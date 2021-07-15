@@ -1,6 +1,6 @@
 # fullstack-nonprofit-site
 
-### A fullstack website for a fake non-profit organization.
+### A fullstack website for a fake non-profit organization. (this an ongoing project)
 
 #### Features:
 - User login & registration authentication
