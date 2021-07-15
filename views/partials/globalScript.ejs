@@ -1,0 +1,19 @@
+<script>
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const sideBar = document.querySelector('.sidebar');
+    const navBar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', e => {
+        if (window.pageYOffset > window.innerHeight) {
+            navBar.style.backgroundColor = "#021645";
+        }
+        else {
+            navBar.style.backgroundColor = "transparent";
+        }
+    });
+
+    toggleBtn.addEventListener('click', e => {
+        sideBar.classList.toggle('active');
+        
+    })
+</script>
