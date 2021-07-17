@@ -41,11 +41,39 @@
 ## ROUTES
 
 - Home ('/')
-- User Registration ('/user/register')
-- User Login ('/user/login')
-- User Profile ('/user')
-- Adoption ('/shop/adopt)
-- Gift shop ('/shop/gifts')
+- Donation ('/donate')
 - Gallery ('/gallery')
 - Contact ('/contact-us')
-- Donation ('/donate')
+
+### Donation page
+
+- message - help us blah blah blah
+- our patients
+- form
+  - give anonymously
+  - one time
+    - 35
+    - 70
+    - 135
+    - any
+  - monthly donation
+    - 25
+    - 40
+    - 55
+    - other
+  - payment info
+    - card number
+  - info
+    - name
+    - last name
+    - email
+  - billing info
+    - address 1
+    - address 2
+    - city
+    - coutry
+    - state/province
+    - zip code
+  - newsletter
+- donation packages
+- monthly goal
