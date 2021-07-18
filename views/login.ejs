@@ -4,15 +4,29 @@
 <%- include("./partials/head.ejs") %>
 
 <body>
-    <h1>Login page!</h1>
-    <form action="/user/login" method="post">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Email address" required>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" placeholder="Password" required>
-        <button type="submit">Log In</button>
-    </form>
-    <p>or</p>
-    <a href="/user/register">Register</a>
+    <div class="login-left-column">
+
+    </div>
+
+    <div class="login-right-column">
+        <h3>Log In</h3>
+        <div class="form-container">
+            <form action="/user/login" method="post">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email address" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                </div>
+                <div>
+                    <button type="submit">Log In</button>
+                </div>
+            </form>
+        </div>
+        <p>New user? <a href="/user/register">Register</a></p>
+    </div>
+
 </body>
 </html>

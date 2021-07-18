@@ -17,35 +17,33 @@ app.use(bodyParser.urlencoded({
 // Import Routes
 const homeRoute = require('./routes/home');
 const userRoute = require('./routes/user');
-const shopRoute = require('./routes/shop');
-
+const donateRoute = require('./routes/donate');
+const galleryRoute = require('./routes/gallery');
+const contactRoute = require('./routes/contact');
 
 // middleware
 app.use(morgan('dev'));
 
 
-// ROUTES: home page
+// ROUTE: home page
 app.use('/', homeRoute);
 
-// ROUTES: adoption page
-app.use('/shop', shopRoute);
-
-// ROUTES: login and registration page
+// ROUTE: login and registration page
 app.use('/user', userRoute);
 
-// render gallery
-app.get('/gallery', (req, res) => {
-    res.render('gallery', { title: 'Gallery' });
-});
+// ROUTE: donations page
+app.use('/donate', donateRoute);
 
-app.get('/contact', (req, res) => {
-    res.render('contact', { title: 'Contact Us' });
-});
+// ROUTE: gallery page
+app.use('/gallery', galleryRoute);
 
+// ROUTE: contacts page
+app.use('/contact', contactRoute);
+
+// ROUTE: 404
 app.use((req, res) => {
     res.status(404).render('404', { title: '404' });
 })
-
 
 // listen to port 3000 for request
 app.listen(3000);

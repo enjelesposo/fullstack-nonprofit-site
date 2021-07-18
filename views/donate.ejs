@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+
+<body id="donate">
+
+    <%- include("./partials/sidebar.ejs") %>
+    <%- include("./partials/navbar.ejs") %>
+
+    <header id="donate-header">
+        <div class="donate-text">
+            <h1>SUPPORT</h1>
+            <h1 class="mid-text">SEA TURTLE</h1>
+            <h1>CONSERVATION</h1>
+            <p>Donate today and help our organization protect our beloved sea turtle friends.</p>
+        </div>
+
+        <div class="down-arrow">
+            <a href="#donation">
+                <i class="las la-arrow-down"></i>
+            </a>
+        </div>
+    </header>
+
+    <section id="donation-packages" class="section">
+        <h2 class="title">Donation Packages</h2>
+        <div class="container">
+            <% packages.forEach( package => { %>
+                <div class="item">
+                    <h3><%= package.header %></h3>
+                    <ul>
+                        <% package.freebies.forEach(freebie => { %>
+                            <li><%= freebie %></li>
+                        <% }); %>
+                    </ul>
+                </div>
+            <% }); %>
+        </div>
+    </section>
+
+    <section id="donation">
+        <div class="container">
+            <h3 class="header">Donation Form</h3>
+            <div class="form-outer">
+                <form action="#">
+                    <div class="page">
+                        <h4 class="title">Amount</h4>
+                        <div class="field">
+                            <input type="radio" name="amount" id="35-dollar" value="35">
+                            <label for="35-dollar">$35</label>
+                        </div>
+                        <div class="field">
+                            <input type="radio" name="amount" id="70-dollar" value="70">
+                            <label for="70-dollar">$70</label>
+                        </div>
+                        <div class="field">
+                            <input type="radio" name="amount" id="150-dollar" value="150">
+                            <label for="150-dollar">$150</label>
+                        </div>
+                        <div class="field">
+                            <input type="radio" name="amount" id="300-dollar" value="300">
+                            <label for="300-dollar">$300</label>
+                        </div>
+                        <div class="field">
+                            <input type="radio" name="amount" id="other-dollar" value="35">
+                            <label for="other-dollar">other:</label>
+                            <input type="number" name="amount" id="other-dollar">
+                        </div>
+                        <div class="field buttons">
+                            <button>Next</button>
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <h4 class="title">Payment Details</h4>
+                        <div class="credit-logo">
+                            <img src="/images/misc/credit-logo.png" alt="credit-card-logos">
+                        </div>
+                        <div class="field">
+                           <label for="card-number">Card Number</label>
+                           <input type="tel" id="card-number">
+                        </div>
+                        <div class="field">
+                            <label for="card-name">Owner</label>
+                            <input type="text" id="card-name">
+                        </div>
+                        <div class="field">
+                            <label for="cvv-number">CVV</label>
+                            <input type="tel" name="cvv-number" id="cvv-number">
+                        </div>
+                        <div class="field">
+                            <label for="expiry-date">Expiry Date</label>
+                            <input type="date" name="expiry-date" id="expiry-date">
+                        </div>
+                        <div class="field buttons">
+                            <button class="prev-1 prev">Back</button>
+                           <button class="next-1 next">Next</button>
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <h4 class="title">Personal Info</h4>
+                        <div class="field">
+                            <label for="first-name">First Name</label>
+                            <input type="text" name="first-name" id="first-name">
+                        </div>
+                        <div class="field">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" name="last-name" id="last-name">
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email">
+                        </div>
+                        <div class="field buttons">
+                            <button class="prev-2 prev">Back</button>
+                            <button class="next-2 next">Next</button>
+                        </div>
+                    </div>
+
+                    <div class="page  current">
+                        <h4 class="title">Billing Info</h4>
+                        <div class="field">
+                            <label for="address">Address</label>
+                            <input type="text" name="address" id="address">
+                        </div>
+                        <div class="field">
+                            <label for="city">City</label>
+                            <input type="text" name="city" id="city">
+                        </div>
+                        <div class="field">
+                            <label for="country">Country</label>
+                            <input type="text" name="country" id="country">
+                        </div>
+                        <div class="field">
+                            <label for="state">State/Province</label>
+                            <input type="text" name="state" id="state">
+                        </div>
+                        <div class="field">
+                            <label for="zip-code">ZIP Code</label>
+                            <input type="text" name="zip-code" id="zip-code">
+                        </div>
+                        <div class="field buttons">
+                            <button class="prev-3 prev">Back</button>
+                            <button class="submit">Submit</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+    <%- include("./partials/globalScript.ejs") %>
+</html>

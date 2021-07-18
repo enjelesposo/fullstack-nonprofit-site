@@ -1,0 +1,51 @@
+[
+    {
+        "header": "$35 Package",
+        "freebies": [
+            "- Personalized donation certificate",
+            "- Shellter stickers",
+            "- Shellter wristband",
+            "- Educational materials"
+        ],
+        "img": "/images/packages/package-1.png"
+    },
+    {
+        "header": "$70 Package",
+        "freebies": [
+            "- Personalized donation certificate",
+            "- Sea Turtle stickers",
+            "- Shellter wristband",
+            "- Shellter baseball cap",
+            "- Educational materials"
+        ],
+        "img": "/images/packages/package-2.png"
+    },
+    {
+        "header": "$150 Package",
+        "freebies": [
+            "- Personalized donation certificate",
+            "- Shellter stickers",
+            "- Shellter wristband",
+            "- Sea Turtle plushie",
+            "- Shellter tee",
+            "- Shellter baseball cap",
+            "- Educational materials"
+        ],
+        "img": "/images/packages/package-3.png"
+    },
+    {
+        "header": "$250 Package",
+        "freebies": [
+            "- Personalized  donation certificate",
+            "- Shellter stickers",
+            "- Shellter wristband",
+            "- Sea Turtle plushie",
+            "- Shellter tee",
+            "- Shellter baseball cap",
+            "- Shellter reusable bag",
+            "- Shellter reusable straw",
+            "- Educational materials"
+        ],
+        "img": "/images/packages/package-4.png"
+    }
+]
