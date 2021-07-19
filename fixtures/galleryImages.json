@@ -1,0 +1,93 @@
+[
+    {
+        "bigImage": "img-1-big.png",
+        "smallImage": "img-1-small.png",
+        "altText": "turtle image"
+    },
+    {
+        "bigImage": "img-2-big.png",
+        "smallImage": "img-2-small.png",
+        "altText": "turtle image"
+    },
+    {
+        "bigImage": "img-3-big.png",
+        "smallImage": "img-3-small.png",
+        "altText": "turtle image"
+    },
+    {
+        "bigImage": "img-4-big.png",
+        "smallImage": "img-4-small.png",
+        "altText": "turtle image"
+    },
+    {
+        "bigImage": "img-5-big.png",
+        "smallImage": "img-5-small.png",
+        "altText": "turtle image"
+    },
+    {
+        "bigImage": "img-6-big.png",
+        "smallImage": "img-6-small.png",
+        "altText": "turtle image"
+    },
+    {
+        "bigImage": "img-7-big.png",
+        "smallImage": "img-7-small.png",
+        "altText": "turtle image"
+    },
+    {
+        "bigImage": "img-8-big.png",
+        "smallImage": "img-8-small.png",
+        "altText": "turtle image"
+    },
+    {
+        "bigImage": "img-9-big.png",
+        "smallImage": "img-9-small.png",
+        "altText": "turtle image"
+    },
+    {
+        "bigImage": "img-10-big.png",
+        "smallImage": "img-10-small.png",
+        "altText": "turtle image"
+    },
+    {
+        "bigImage": "img-11-big.png",
+        "smallImage": "img-11-small.png",
+        "altText": "turtle image"
+    },
+    {
+        "bigImage": "img-12-big.png",
+        "smallImage": "img-12-small.png",
+        "altText": "turtle image"
+    },
+    {
+        "bigImage": "img-13-big.png",
+        "smallImage": "img-13-small.png",
+        "altText": "turtle image"
+    },
+    {
+        "bigImage": "img-14-big.png",
+        "smallImage": "img-14-small.png",
+        "altText": "turtle image"
+    },
+    {
+        "bigImage": "img-15-big.png",
+        "smallImage": "img-15-small.png",
+        "altText": "turtle image"
+    },
+    {
+        "bigImage": "img-16-big.png",
+        "smallImage": "img-16-small.png",
+        "altText": "turtle image"
+    }
+    ,
+    {
+        "bigImage": "img-17-big.png",
+        "smallImage": "img-17-small.png",
+        "altText": "turtle image"
+    },
+    {
+        "bigImage": "img-18-big.png",
+        "smallImage": "img-18-small.png",
+        "altText": "turtle image"
+    }
+]

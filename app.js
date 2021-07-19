@@ -16,7 +16,6 @@ app.use(bodyParser.urlencoded({
 
 // Import Routes
 const homeRoute = require('./routes/home');
-const userRoute = require('./routes/user');
 const donateRoute = require('./routes/donate');
 const galleryRoute = require('./routes/gallery');
 const contactRoute = require('./routes/contact');
@@ -27,9 +26,6 @@ app.use(morgan('dev'));
 
 // ROUTE: home page
 app.use('/', homeRoute);
-
-// ROUTE: login and registration page
-app.use('/user', userRoute);
 
 // ROUTE: donations page
 app.use('/donate', donateRoute);

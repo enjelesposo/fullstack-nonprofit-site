@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <%- include("./partials/head.ejs") %>
-
-<body>
+<body id="gallery">
 
     <%- include("./partials/sidebar.ejs") %>
     <%- include("./partials/navbar.ejs") %>
 
-    <h1>Page under construction...</h1>
+    <div class="gallery-header">
+        <h1>GALLERY</h1>
+        <p>Look at all these turtleees!</p>
+    </div>
 
+    <div class="gallery-images">
+        <% images.forEach( image => { %>
+            <div class="thumbnail" data-image='<%= image.bigImage %>'>
+                <img src="/images/gallery/<%= image.smallImage %>" alt="<%= image.altText %>">
+            </div>
+        <% }) %>
+    </div>
+
+    <div class="full-image-container">
+        <div class="full-image-inner">
+            <img class="full-image" src="/images/gallery/img-1-big.png">
+            <button class="close-btn"><i class="las la-times-circle"></i></button>
+        </div>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
 </body>
+<%- include('./partials/globalScript.ejs') %>
+<script>
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const fullImageContainer = document.querySelector('.full-image-container');
+    const fullImage = document.querySelector('.full-image');
+    const closeButton = document.querySelector('.close-btn');
 
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', e => {
+            thumbnails.forEach( i => {
+                i.classList.remove('current');
+            })
+            const img = e.target.getAttribute('data-image');
+            e.target.classList.add('current');
+            if(fullImageContainer.style.display == 'block') {
+                fullImage.src = "/images/gallery/" + img;
+            }
+            else {
+                fullImageContainer.style.display = 'block';
+                fullImage.src = "/images/gallery/" + img;
+            }
+        })
+    })
+
+    closeButton.addEventListener('click', () => {
+        fullImageContainer.style.display = 'none';
+    })
+</script>
 </html>
