@@ -27,7 +27,8 @@
         <h2 class="title">Donation Packages</h2>
         <div class="container">
             <% packages.forEach( package => { %>
-                <div class="item">
+                <div class="item" data-item-id="<%= package.id %>">
+                    <img src="<%= package.img %>" alt="">
                     <h3><%= package.header %></h3>
                     <ul>
                         <% package.freebies.forEach(freebie => { %>
@@ -61,11 +62,6 @@
                         <div class="field">
                             <input type="radio" name="amount" id="300-dollar" value="300">
                             <label for="300-dollar">$300</label>
-                        </div>
-                        <div class="field">
-                            <input type="radio" name="amount" id="other-dollar" value="35">
-                            <label for="other-dollar">other:</label>
-                            <input type="number" name="amount" id="other-dollar">
                         </div>
                         <div class="field buttons">
                             <button>Next</button>

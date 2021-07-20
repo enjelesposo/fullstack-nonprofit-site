@@ -116,7 +116,7 @@ label {
 .navbar .toggle-btn span {
   width: 100%;
   height: 2px;
-  background-color: #fff;
+  background-color: #38d493;
 }
 
 /* -------------------------------- SIDEBAR  -------------------------------- */
@@ -682,7 +682,7 @@ footer .footer-links .column li {
 #donate-header .down-arrow {
   width: 30px;
   position: absolute;
-  bottom: 10px;
+  bottom: 30px;
   left: 0%;
   right: 0%;
   margin: 0 auto;
@@ -762,7 +762,19 @@ footer .footer-links .column li {
 }
 
 #donation-packages .container .item {
+  max-width: 340px;
+  width: 100%;
   margin-bottom: 20px;
+}
+
+@media (min-width: 1000px) {
+  #donation-packages .container .item {
+    margin-right: 20px;
+  }
+}
+
+#donation-packages .container .item img {
+  width: 100%;
 }
 
 #donation-packages .container .item h3 {
@@ -1032,38 +1044,38 @@ footer .footer-links .column li {
 }
 
 @media (min-width: 1000px) {
-  #contact {
+  #contact .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-#contact .contact-info {
+#contact .container .contact-info {
   height: 100vh;
   background: #000;
   padding-top: 15vh;
 }
 
 @media (min-width: 1000px) {
-  #contact .contact-info {
+  #contact .container .contact-info {
     width: 40%;
   }
 }
 
-#contact .contact-info h2 {
+#contact .container .contact-info h2 {
   color: #fff;
   text-shadow: 4px 1px #38d493;
   text-align: center;
   margin-bottom: 30px;
 }
 
-#contact .contact-info .contact-info-inner {
+#contact .container .contact-info .contact-info-inner {
   width: 60%;
   margin: 20vh auto;
 }
 
-#contact .contact-info .contact-info-inner .info {
+#contact .container .contact-info .contact-info-inner .info {
   width: 100%;
   margin: 20px 0;
   display: -webkit-box;
@@ -1074,51 +1086,51 @@ footer .footer-links .column li {
           align-items: center;
 }
 
-#contact .contact-info .contact-info-inner .info img {
+#contact .container .contact-info .contact-info-inner .info img {
   width: 30px;
   height: 30px;
   margin-right: 20px;
 }
 
-#contact .contact-info .contact-info-inner .info p {
+#contact .container .contact-info .contact-info-inner .info p {
   color: #fff;
 }
 
-#contact .contact-form {
+#contact .container .contact-form {
   padding-top: 12vh;
   height: 100vh;
 }
 
-#contact .contact-form h2 {
+#contact .container .contact-form h2 {
   color: #000;
   text-shadow: 3px 1px #38d493;
   text-align: center;
 }
 
 @media (min-width: 1000px) {
-  #contact .contact-form {
+  #contact .container .contact-form {
     width: 60%;
   }
 }
 
-#contact .contact-form .contact-form-inner {
+#contact .container .contact-form .contact-form-inner {
   max-width: 400px;
   width: 100%;
   margin: 20px auto;
   padding: 0 20px;
 }
 
-#contact .contact-form .contact-form-inner form .field {
+#contact .container .contact-form .contact-form-inner form .field {
   margin: 8px 0;
 }
 
-#contact .contact-form .contact-form-inner form .field label {
+#contact .container .contact-form .contact-form-inner form .field label {
   display: block;
   margin-bottom: 8px;
 }
 
-#contact .contact-form .contact-form-inner form .field input,
-#contact .contact-form .contact-form-inner form .field textarea {
+#contact .container .contact-form .contact-form-inner form .field input,
+#contact .container .contact-form .contact-form-inner form .field textarea {
   width: 100%;
   height: 30px;
   padding: 5px;
@@ -1129,17 +1141,17 @@ footer .footer-links .column li {
   outline: none;
 }
 
-#contact .contact-form .contact-form-inner form .field textarea {
+#contact .container .contact-form .contact-form-inner form .field textarea {
   height: 200px;
   resize: none;
 }
 
-#contact .contact-form .contact-form-inner form .button-wrapper {
+#contact .container .contact-form .contact-form-inner form .button-wrapper {
   text-align: center;
   margin: 20px 0;
 }
 
-#contact .contact-form .contact-form-inner form .button-wrapper button {
+#contact .container .contact-form .contact-form-inner form .button-wrapper button {
   width: 90px;
   background: #38d493;
   color: white;
@@ -1153,7 +1165,7 @@ footer .footer-links .column li {
   transition: all 0.3s ease;
 }
 
-#contact .contact-form .contact-form-inner form .button-wrapper button:hover {
+#contact .container .contact-form .contact-form-inner form .button-wrapper button:hover {
   background: #000;
   color: #38d493;
 }

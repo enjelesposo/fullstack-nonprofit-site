@@ -103,7 +103,7 @@ label {
     span {
       width: 100%;
       height: 2px;
-      background-color: #fff;
+      background-color: $secondaryColor;
     }
   }
 }
@@ -609,7 +609,7 @@ footer {
   .down-arrow {
     width: 30px;
     position: absolute;
-    bottom: 10px;
+    bottom: 30px;
     left: 0%;
     right: 0%;
     margin: 0 auto;
@@ -656,7 +656,15 @@ footer {
       justify-content: center;
     }
     .item {
+      max-width: 340px;
+      width: 100%;
       margin-bottom: 20px;
+      @media (min-width: 1000px) {
+        margin-right: 20px;
+      }
+      img {
+        width: 100%;
+      }
       h3 {
         text-align: center;
       }
@@ -867,98 +875,100 @@ footer {
 }
 
 #contact {
-  @media (min-width: 1000px) {
-    display: flex;
-  }
-  .contact-info {
-    height: 100vh;
-    background: $mainColor;
-    padding-top: 15vh;
+  .container {
     @media (min-width: 1000px) {
-      width: 40%;
+      display: flex;
     }
-    h2 {
-      color: #fff;
-      text-shadow: 4px 1px $secondaryColor;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .contact-info-inner {
-      width: 60%;
-      margin: 20vh auto;
-      .info {
-        width: 100%;
-        margin: 20px 0;
-        display: flex;
-        align-items: center;
-        img {
-          width: 30px;
-          height: 30px;
-          margin-right: 20px;
-        }
-        p {
-          color: #fff;
+    .contact-info {
+      height: 100vh;
+      background: $mainColor;
+      padding-top: 15vh;
+      @media (min-width: 1000px) {
+        width: 40%;
+      }
+      h2 {
+        color: #fff;
+        text-shadow: 4px 1px $secondaryColor;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .contact-info-inner {
+        width: 60%;
+        margin: 20vh auto;
+        .info {
+          width: 100%;
+          margin: 20px 0;
+          display: flex;
+          align-items: center;
+          img {
+            width: 30px;
+            height: 30px;
+            margin-right: 20px;
+          }
+          p {
+            color: #fff;
+          }
         }
       }
     }
-  }
-  .contact-form {
-    padding-top: 12vh;
-    height: 100vh;
-    h2 {
-      color: $mainColor;
-      text-shadow: 3px 1px $secondaryColor;
-      text-align: center;
-    }
-    @media (min-width: 1000px) {
-      width: 60%;
-    }
-    .contact-form-inner {
-      max-width: 400px;
-      width: 100%;
-      margin: 20px auto;
-      padding: 0 20px;
-      form {
-        .field {
-          margin: 8px 0;
-          label {
-            display: block;
-            margin-bottom: 8px;
+    .contact-form {
+      padding-top: 12vh;
+      height: 100vh;
+      h2 {
+        color: $mainColor;
+        text-shadow: 3px 1px $secondaryColor;
+        text-align: center;
+      }
+      @media (min-width: 1000px) {
+        width: 60%;
+      }
+      .contact-form-inner {
+        max-width: 400px;
+        width: 100%;
+        margin: 20px auto;
+        padding: 0 20px;
+        form {
+          .field {
+            margin: 8px 0;
+            label {
+              display: block;
+              margin-bottom: 8px;
+            }
+            input,
+            textarea {
+              width: 100%;
+              height: 30px;
+              padding: 5px;
+              border: none;
+              border-bottom: 3px solid $secondaryColor;
+              background: rgba(204, 204, 204, 0.2);
+              border-radius: 3px;
+              outline: none;
+            }
+            textarea {
+              height: 200px;
+              resize: none;
+            }
           }
-          input,
-          textarea {
-            width: 100%;
-            height: 30px;
-            padding: 5px;
-            border: none;
-            border-bottom: 3px solid $secondaryColor;
-            background: rgba(204, 204, 204, 0.2);
-            border-radius: 3px;
-            outline: none;
-          }
-          textarea {
-            height: 200px;
-            resize: none;
-          }
-        }
-        .button-wrapper {
-          text-align: center;
-          margin: 20px 0;
-          button {
-            width: 90px;
-            background: $secondaryColor;
-            color: white;
-            padding: 8px;
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+          .button-wrapper {
+            text-align: center;
+            margin: 20px 0;
+            button {
+              width: 90px;
+              background: $secondaryColor;
+              color: white;
+              padding: 8px;
+              font-size: 18px;
+              font-weight: bold;
+              border: none;
+              border-radius: 20px;
+              cursor: pointer;
+              transition: all 0.3s ease;
 
-            &:hover {
-              background: $mainColor;
-              color: $secondaryColor;
+              &:hover {
+                background: $mainColor;
+                color: $secondaryColor;
+              }
             }
           }
         }

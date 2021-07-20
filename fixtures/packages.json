@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "header": "$35 Package",
         "freebies": [
             "- Personalized donation certificate",
@@ -10,6 +11,7 @@
         "img": "/images/packages/package-1.png"
     },
     {
+        "id": 2,
         "header": "$70 Package",
         "freebies": [
             "- Personalized donation certificate",
@@ -21,6 +23,7 @@
         "img": "/images/packages/package-2.png"
     },
     {
+        "id": 3,
         "header": "$150 Package",
         "freebies": [
             "- Personalized donation certificate",
@@ -34,6 +37,7 @@
         "img": "/images/packages/package-3.png"
     },
     {
+        "id": 4,
         "header": "$250 Package",
         "freebies": [
             "- Personalized  donation certificate",

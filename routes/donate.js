@@ -7,4 +7,8 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/thanks', (req, res) => {
+    res.render('thanks', { title: "Thank you :)", message: 'Thank you for donating!' });
+})
+
 module.exports = router;
