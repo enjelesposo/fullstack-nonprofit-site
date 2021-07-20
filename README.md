@@ -1,4 +1,4 @@
-# Shellter website
+# Shellter website :turtle:
 
 > A simple fullstack website for a fake nonprofit organization called 'Shellter'.
 
