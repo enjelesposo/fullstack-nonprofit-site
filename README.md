@@ -41,8 +41,3 @@ node server
 | morgan       | <https://github.com/expressjs/morgan#readme/> |
 | googleapis   | <https://console.cloud.google.com/apis>       |
 | nodemailer   | <https://nodemailer.com/about/>               |
-
-
-## License
-
-[MIT](LICENSE)
