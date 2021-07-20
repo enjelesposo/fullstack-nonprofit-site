@@ -1,28 +1,52 @@
-# fullstack-nonprofit-site
+# Shellter website
 
-### A fullstack website for a fake non-profit organization. (this is an ongoing project)
+> A simple fullstack website for a fake nonprofit organization called 'Shellter'.
 
-#### Features:
-- User login & registration authentication
-- E-commerce system
-- Payment Integration
+`simple-website-with-blog` is a simple [Node.js](https://nodejs.org/) web application for static content that includes a blog.
+It was created as the basis for [my own website](https://dlaa.me/), but everyone is welcome to use it.
+The implementation strives to be simple and free of unnecessary dependencies.
 
-#### Built with:
-- **Frontend**
-  - HTML
-  - CSS
-  - Javascript
-  - EJS
-- **Backend**
-  - NodeJS
-  - ExpressJS
-  - PostgreSQL
-- **Dependencies**
-  - "bcrypt": "^5.0.1",
-  - "dotenv": "^10.0.0",
-  - "ejs": "^3.1.6",
-  - "express": "^4.17.1",
-  - "joi": "^17.4.1",
-  - "jsonwebtoken": "^8.5.1",
-  - "morgan": "^1.10.0",
-  - "pg": "^8.6.0"
+## Goals
+
+- Integrate paypal payment for donations
+- Connect to a database for newsletter
+- Create a fully functioning contact form
+- Responsive design
+
+## Structure
+
+- `/server.js` Entry point for the application, configures the server and static content
+- `/views` EJS files for HTMl markups
+- `/views/partials` EJS files for the same codes on several web pages
+- `/routes` Router for web pages
+- `/fixtures` JSON files for website contents
+- `/public/images` Images for website
+- `/public/styles` Sass & CSS files for global styling
+
+## Run website locally
+
+1. Install Node.js version 10+
+2. Fork and clone repository
+3. Install dependencies
+``` bash
+npm install
+```
+4. Run application
+``` bash
+node server
+```
+
+## Dependencies
+
+| Project      | Home Page                                     |
+|--------------|-----------------------------------------------|
+| express      | <https://expressjs.com/>                      |
+| ejs          | <https://ejs.co/>                             |
+| morgan       | <https://github.com/expressjs/morgan#readme/> |
+| googleapis   | <https://console.cloud.google.com/apis>       |
+| nodemailer   | <https://nodemailer.com/about/>               |
+
+
+## License
+
+[MIT](LICENSE)
