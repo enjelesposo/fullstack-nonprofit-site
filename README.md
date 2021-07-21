@@ -4,10 +4,10 @@
 
 ## Goals
 
-- Integrate paypal payment for donations
+- Use paypal for payment integration
 - Connect to a database for newsletter
-- Create a fully functioning contact form
-- Responsive design
+- Create a functioning contact form
+- Make design responsive
 
 ## Structure
 
