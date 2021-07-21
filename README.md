@@ -4,10 +4,10 @@
 
 ## Goals
 
-- Use paypal for payment integration
-- Connect to a database for newsletter
-- Create a functioning contact form
-- Make design responsive
+- Integrate a payment gateway
+- Connect to database for newsletter registration :heavy_check_mark:
+- Create a functioning contact form :heavy_check_mark:
+- Make design responsive :heavy_check_mark:
 
 ## Structure
 
