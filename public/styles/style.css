@@ -99,8 +99,8 @@ label {
 }
 
 .navbar .toggle-btn {
-  width: 20px;
-  height: 15px;
+  width: 30px;
+  height: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,9 +113,15 @@ label {
           justify-content: space-between;
 }
 
+@media (min-width: 1000px) {
+  .navbar .toggle-btn {
+    margin-right: 30px;
+  }
+}
+
 .navbar .toggle-btn span {
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: #38d493;
 }
 
@@ -803,9 +809,10 @@ footer .footer-links .column li {
   max-width: 380px;
   width: 100%;
   margin: 0 10px;
-  padding: 30px 20px 30px 20px;
+  padding: 30px 20px 50px 20px;
   background-color: #fff;
   border-radius: 5px;
+  position: relative;
 }
 
 #donation .container h3 {
@@ -814,6 +821,7 @@ footer .footer-links .column li {
 
 #donation .container .form-outer {
   width: 100%;
+  height: 100%;
   margin: 20px 0;
 }
 
@@ -826,7 +834,16 @@ footer .footer-links .column li {
 #donation .container .form-outer form .page {
   display: none;
   width: 80%;
+  height: 100%;
   margin: 0 auto;
+}
+
+#donation .container .form-outer form .page.current {
+  display: block;
+}
+
+#donation .container .form-outer form .page:first-child .field label {
+  display: inline;
 }
 
 #donation .container .form-outer form .page img {
@@ -861,6 +878,11 @@ footer .footer-links .column li {
 #donation .container .form-outer form .page .buttons {
   display: block;
   margin: 15px auto;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 #donation .container .form-outer form .page .buttons button {
@@ -873,14 +895,6 @@ footer .footer-links .column li {
   border-radius: 20px;
   background-color: #38d493;
   cursor: pointer;
-}
-
-#donation .container .form-outer form .page.current {
-  display: block;
-}
-
-#donation .container .form-outer form .page:first-child .field label {
-  display: inline;
 }
 
 /* -------------------------------- GALLERY  -------------------------------- */
@@ -1168,5 +1182,59 @@ footer .footer-links .column li {
 #contact .container .contact-form .contact-form-inner form .button-wrapper button:hover {
   background: #000;
   color: #38d493;
+}
+
+/* -------------------------------- THANK YOU  -------------------------------- */
+#thanks {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#thanks .thanks-inner {
+  max-width: 700px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 800px) {
+  #thanks .thanks-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#thanks .thanks-inner img {
+  width: 240px;
+  margin-right: 30px;
+}
+
+#thanks .thanks-inner a {
+  color: blue;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#thanks .thanks-inner a:hover {
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
