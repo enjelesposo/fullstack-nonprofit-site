@@ -3,6 +3,10 @@
 
 <%- include("./partials/head.ejs") %>
 
+<head>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+
 <body id="donate">
 
     <%- include("./partials/sidebar.ejs") %>
@@ -44,27 +48,27 @@
         <div class="container">
             <h3 class="header">Donation Form</h3>
             <div class="form-outer">
-                <form action="#">
-                    <div class="page">
+                <form id="payment-form" action="/donate/create-payment-intent" method="post">
+                    <div class="page   current">
                         <h4 class="title">Amount</h4>
                         <div class="field">
                             <input type="radio" name="amount" id="35-dollar" value="35">
-                            <label for="35-dollar">$35</label>
+                            <label for="35-dollar">$35.00</label>
                         </div>
                         <div class="field">
                             <input type="radio" name="amount" id="70-dollar" value="70">
-                            <label for="70-dollar">$70</label>
+                            <label for="70-dollar">$70.00</label>
                         </div>
                         <div class="field">
-                            <input type="radio" name="amount" id="150-dollar" value="150">
-                            <label for="150-dollar">$150</label>
+                            <input type="radio" name="amount" id="150-dollar" value="1500">
+                            <label for="150-dollar">$150.00</label>
                         </div>
                         <div class="field">
                             <input type="radio" name="amount" id="300-dollar" value="300">
-                            <label for="300-dollar">$300</label>
+                            <label for="300-dollar">$300.00</label>
                         </div>
                         <div class="field buttons">
-                            <button>Next</button>
+                            <button class="next">Next</button>
                         </div>
                     </div>
 
@@ -73,21 +77,21 @@
                         <div class="credit-logo">
                             <img src="/images/misc/credit-logo.png" alt="credit-card-logos">
                         </div>
-                        <div class="field">
-                           <label for="card-number">Card Number</label>
-                           <input type="tel" id="card-number">
+                        <div id="card-element" class="field">
+                           <label for="cc_number">Card Number</label>
+                           <input type="tel" name="cc_number" id="cc_number">
                         </div>
                         <div class="field">
-                            <label for="card-name">Owner</label>
-                            <input type="text" id="card-name">
+                            <label for="cc_name">Owner</label>
+                            <input type="text" name="cc_name" id="cc_name">
                         </div>
                         <div class="field">
-                            <label for="cvv-number">CVV</label>
-                            <input type="tel" name="cvv-number" id="cvv-number">
+                            <label for="cvv_number">CVV</label>
+                            <input type="tel" name="cvv_number" id="cvv_number">
                         </div>
                         <div class="field">
-                            <label for="expiry-date">Expiry Date</label>
-                            <input type="date" name="expiry-date" id="expiry-date">
+                            <label for="cc_expiry-date">Expiry Date</label>
+                            <input type="date" name="cc_expiry_date" id="cc_expiry_date">
                         </div>
                         <div class="field buttons">
                             <button class="prev-1 prev">Back</button>
@@ -98,12 +102,12 @@
                     <div class="page">
                         <h4 class="title">Personal Info</h4>
                         <div class="field">
-                            <label for="first-name">First Name</label>
-                            <input type="text" name="first-name" id="first-name">
+                            <label for="first_name">First Name</label>
+                            <input type="text" name="first_name" id="first_name">
                         </div>
                         <div class="field">
-                            <label for="last-name">Last Name</label>
-                            <input type="text" name="last-name" id="last-name">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" name="last_name" id="last_name">
                         </div>
                         <div class="field">
                             <label for="email">Email</label>
@@ -115,7 +119,7 @@
                         </div>
                     </div>
 
-                    <div class="page  current">
+                    <div class="page">
                         <h4 class="title">Billing Info</h4>
                         <div class="field">
                             <label for="address">Address</label>
@@ -134,15 +138,19 @@
                             <input type="text" name="state" id="state">
                         </div>
                         <div class="field">
-                            <label for="zip-code">ZIP Code</label>
-                            <input type="text" name="zip-code" id="zip-code">
+                            <label for="zip_code">ZIP Code</label>
+                            <input type="text" name="zip_code" id="zip_code">
                         </div>
                         <div class="field buttons">
                             <button class="prev-3 prev">Back</button>
-                            <button class="submit">Submit</button>
+                            <button id="submit" class="submit" type="submit">Submit</button>
                         </div>
                     </div>
-
+                    <p id="card-error" role="alert"></p>
+                    <p class="result-message hidden">
+                        Payment succeeded, see the result in your
+                        <a href="" target="_blank">Stripe dashboard.</a> Refresh the page to pay again.
+                    </p>
                 </form>
             </div>
         </div>
@@ -150,5 +158,43 @@
 
     <%- include('./partials/footer.ejs') %>
 </body>
-    <%- include("./partials/globalScript.ejs") %>
+<%- include("./partials/globalScript.ejs") %>
+<script>
+    const formPages = document.querySelectorAll('.page');
+    const prevButtons = document.querySelectorAll('.prev');
+    const nextButtons = document.querySelectorAll('.next');
+
+    nextButtons.forEach(button => {
+        button.addEventListener('click', e => {
+            e.preventDefault();
+            nextSlide();
+        })
+    })
+
+    prevButtons.forEach(button => {
+        button.addEventListener('click', e => {
+            e.preventDefault();
+            prevSlide();
+        })
+    })
+
+    const nextSlide = () => {
+        const current = document.querySelector('.current');
+        current.classList.remove('current');
+
+        if (current.nextElementSibling) {
+            current.nextElementSibling.classList.add('current')
+        }
+    }
+
+    const prevSlide = () => {
+        const current = document.querySelector('.current');
+        current.classList.remove('current');
+
+        if (current.previousElementSibling) {
+            current.previousElementSibling.classList.add('current')
+        }
+    }
+    
+</script>
 </html>

@@ -83,10 +83,11 @@
     <section id="newsletter">
         <h3>Don't miss an update.</h3>
         <p>We will never spam you or sell your info. Just the important Shellter news and updates!</p>
-        <form action="">
-            <input type="text" placeholder="First name">
-            <input type="email" placeholder="Email address">
-            <button>Get Email Alerts</button>
+        <form action="/newsletter" method="post">
+            <label for="first_name"></label>
+            <input type="text" name="first_name" id="first_name" placeholder="First name">
+            <input type="email" name="email" id="email" placeholder="Email address">
+            <button type="submit">Get Email Alerts</button>
         </form>
     </section>
 
